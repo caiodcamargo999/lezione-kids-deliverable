@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Area Membri & Download - Matematica 4 Operazioni | Lezione Kids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #2c2420;
+      background-color: #f5f3ef;
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* =====================================================
+       TOP STATUS BAR
+       ===================================================== */
+    .top-bar {
+      background-color: #4b1412;
+      color: #ffffff;
+      text-align: center;
+      padding: 11px 16px;
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      text-transform: uppercase;
+    }
+
+    .top-bar span {
+      color: #ffe25c;
+    }
+
+    /* =====================================================
+       HERO WELCOME SECTION
+       ===================================================== */
+    .hero-section {
+      padding: 38px 20px 44px;
+      text-align: center;
+      background: linear-gradient(180deg, #ece0d1 0%, #f5f3ef 100%);
+      border-bottom: 1px solid #e2d5c4;
+    }
+
+    .container {
+      max-width: 1060px;
+      margin: 0 auto;
+    }
+
+    .brand-logo {
+      width: 132px;
+      margin: 0 auto 22px;
+    }
+
+    .status-pill {
+      background-color: #dcfce7;
+      color: #14532d;
+      border: 1px solid #86efac;
+      padding: 7px 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #4b1412;
+      max-width: 780px;
+      margin: 0 auto 14px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title .highlight {
+      position: relative;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .hero-title .highlight::after {
+      content: "";
+      position: absolute;
+      left: -3px;
+      right: -3px;
+      bottom: 3px;
+      height: 13px;
+      background-color: #ffe25c;
+      z-index: -1;
+      border-radius: 2px;
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: #4a3f39;
+      max-width: 670px;
+      margin: 0 auto 26px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-download-all {
+      background-color: #2caa33;
+      color: #ffffff;
+      border: none;
+      padding: 16px 30px;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 6px 18px rgba(44, 170, 51, 0.28);
+      transition: transform 0.15s ease, filter 0.15s ease;
+    }
+
+    .btn-download-all:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .hero-helper {
+      font-size: 12.5px;
+      color: #6b5e56;
+      margin-top: 12px;
+    }
+
+    /* =====================================================
+       MAIN PRODUCT CARD (QUADERNO PRINCIPALE)
+       ===================================================== */
+    .main-material-section {
+      padding: 42px 20px 24px;
+    }
+
+    .section-tag {
+      display: inline-block;
+      background-color: #4b1412;
+      color: #ffe25c;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      padding: 5px 14px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .section-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 27px;
+      font-weight: 800;
+      color: #2c1614;
+      margin-bottom: 22px;
+    }
+
+    .main-card {
+      background-color: #ffffff;
+      border: 2px solid #2caa33;
+      border-radius: 18px;
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      gap: 34px;
+      align-items: center;
+      box-shadow: 0 12px 32px rgba(75, 20, 18, 0.08);
+      position: relative;
+    }
+
+    .main-card-badge {
+      position: absolute;
+      top: -13px;
+      left: 28px;
+      background-color: #2caa33;
+      color: #ffffff;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      letter-spacing: 0.4px;
+      box-shadow: 0 3px 8px rgba(44, 170, 51, 0.25);
+    }
+
+    .main-card-preview {
+      background-color: #f8f6f2;
+      border-radius: 12px;
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #ede8df;
+    }
+
+    .main-card-preview img {
+      max-height: 270px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.12));
+    }
+
+    .main-card-body h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 25px;
+      font-weight: 800;
+      color: #4b1412;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .main-card-desc {
+      font-size: 15px;
+      color: #4d433e;
+      margin-bottom: 18px;
+    }
+
+    .meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .meta-pill {
+      background-color: #f3ede4;
+      color: #4b1412;
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-primary-dl {
+      background-color: #2caa33;
+      color: #ffffff;
+      padding: 14px 24px;
+      border-radius: 9px;
+      font-size: 14.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      transition: filter 0.15s ease, transform 0.15s ease;
+      box-shadow: 0 4px 12px rgba(44, 170, 51, 0.22);
+    }
+
+    .btn-primary-dl:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary-view {
+      background-color: #f3ede4;
+      color: #4b1412;
+      border: 1px solid #d8c8b4;
+      padding: 14px 20px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-secondary-view:hover {
+      background-color: #e7dccb;
+    }
+
+    /* =====================================================
+       BONUSES GRID SECTION (I TUOI 4 BONUS ESCLUSIVI)
+       ===================================================== */
+    .bonuses-section {
+      padding: 28px 20px 56px;
+    }
+
+    .bonuses-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .bonus-card {
+      background-color: #ffffff;
+      border: 1px solid #e2d6c5;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 6px 20px rgba(75, 20, 18, 0.05);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .bonus-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(75, 20, 18, 0.09);
+    }
+
+    .bonus-card-top {
+      display: grid;
+      grid-template-columns: 128px 1fr;
+      gap: 18px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .bonus-thumb {
+      background-color: #f8f6f2;
+      border: 1px solid #ede8df;
+      border-radius: 10px;
+      padding: 10px;
+      height: 156px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .bonus-thumb img {
+      max-height: 136px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.12));
+    }
+
+    .bonus-badge {
+      display: inline-block;
+      background-color: #fff3cd;
+      color: #854d0e;
+      border: 1px solid #fde68a;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      margin-bottom: 8px;
+    }
+
+    .bonus-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      color: #4b1412;
+      line-height: 1.22;
+      margin-bottom: 6px;
+    }
+
+    .bonus-desc {
+      font-size: 13.5px;
+      color: #5a4e48;
+      margin-bottom: 10px;
+    }
+
+    .bonus-meta {
+      font-size: 12px;
+      font-weight: 600;
+      color: #786b63;
+    }
+
+    .bonus-actions {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 10px;
+      padding-top: 16px;
+      border-top: 1px solid #f0ebe3;
+    }
+
+    .bonus-actions .btn-primary-dl {
+      padding: 12px 16px;
+      font-size: 13.5px;
+    }
+
+    .bonus-actions .btn-secondary-view {
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+
+    /* =====================================================
+       INSTRUCTIONS / TIPS SECTION
+       ===================================================== */
+    .tips-section {
+      background-color: #d4c0ad;
+      padding: 52px 20px;
+      border-top: 1px solid #c5ae98;
+    }
+
+    .tips-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      color: #4b1412;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .tip-card {
+      background-color: #f7f3ee;
+      border-radius: 14px;
+      padding: 24px 22px;
+    }
+
+    .tip-num {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background-color: #4b1412;
+      color: #ffe25c;
+      font-weight: 800;
+      font-size: 15px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+    }
+
+    .tip-card h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16.5px;
+      font-weight: 700;
+      color: #4b1412;
+      margin-bottom: 6px;
+    }
+
+    .tip-card p {
+      font-size: 14px;
+      color: #4a3f39;
+      line-height: 1.48;
+    }
+
+    /* =====================================================
+       FOOTER
+       ===================================================== */
+    .footer {
+      background-color: #f6f7f8;
+      padding: 34px 20px;
+      text-align: center;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .footer-logo {
+      width: 118px;
+      margin: 0 auto 14px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: #4b5563;
+    }
+
+    /* =====================================================
+       RESPONSIVE
+       ===================================================== */
+    @media (max-width: 860px) {
+      .main-card {
+        grid-template-columns: 1fr;
+        padding: 24px 20px;
+        gap: 22px;
+      }
+
+      .bonuses-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-title {
+        font-size: 27px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .bonus-card-top {
+        grid-template-columns: 100px 1fr;
+        gap: 14px;
+      }
+
+      .bonus-actions {
+        grid-template-columns: 1fr;
+      }
+
+      .card-buttons {
+        flex-direction: column;
+      }
+
+      .card-buttons a {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP STATUS BAR -->
+  <div class="top-bar">
+    ✅ <span>ACCESSO CONFERMATO:</span> IL TUO KIT COMPLETO È PRONTO PER IL DOWNLOAD IMMEDIATO
+  </div>
+
+  <!-- HERO WELCOME SECTION -->
+  <header class="hero-section">
+    <div class="container">
+      <div class="brand-logo">
+        <img src="assets/logo.png" alt="Lezione Kids" />
+      </div>
+
+      <div class="status-pill">
+        <span>🎉 Acquisto Completato con Successo</span>
+      </div>
+
+      <h1 class="hero-title">
+        Benvenuto nella tua area di download<br />
+        <span class="highlight">Matematica 4 Operazioni!</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        Qui sotto trovi il quaderno principale e tutti i <strong>4 bonus esclusivi</strong> in formato PDF, pronti da scaricare sul tuo dispositivo e stampare tutte le volte che vuoi.
+      </p>
+
+      <div class="hero-actions">
+        <button type="button" class="btn-download-all" id="btnDownloadAll">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
+          <span>SCARICA TUTTI I FILE (5 PDF)</span>
+        </button>
+      </div>
+      <p class="hero-helper">Oppure scarica singolarmente ciascun materiale qui sotto ⤵</p>
+    </div>
+  </header>
+
+  <!-- MAIN MATERIAL SECTION -->
+  <section class="main-material-section">
+    <div class="container">
+      <span class="section-tag">1. Quaderno Principale</span>
+      <h2 class="section-heading">Il Tuo Materiale Principale</h2>
+
+      <div class="main-card">
+        <div class="main-card-badge">⭐ MATERIALE PRINCIPALE</div>
+
+        <div class="main-card-preview">
+          <img src="assets/hero_main.png" alt="Quaderno Matematica 4 Operazioni" />
+        </div>
+
+        <div class="main-card-body">
+          <h3>Quaderno Matematica 4 Operazioni (Dalla 1ª alla 5ª Classe)</h3>
+          <p class="main-card-desc">
+            Quaderno completo con attività pratiche, visive e progressive su addizione, sottrazione, moltiplicazione, divisione, numeri, segni, problemi matematici e frazioni, pensato per accompagnare il bambino dalla prima alla quinta classe.
+          </p>
+
+          <div class="meta-pills">
+            <span class="meta-pill">📄 Formato PDF Stampabile</span>
+            <span class="meta-pill">🎓 Dalla 1ª alla 5ª Classe</span>
+            <span class="meta-pill">✅ Soluzioni Incluse</span>
+            <span class="meta-pill">💾 3,8 MB</span>
+          </div>
+
+          <div class="card-buttons">
+            <a href="files/Matematica_4_Operazioni.pdf" download="Matematica_4_Operazioni.pdf" class="btn-primary-dl">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>SCARICA IL QUADERNO (PDF)</span>
+            </a>
+
+            <a href="files/Matematica_4_Operazioni.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-view">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                <polyline points="15 3 21 3 21 9"/>
+                <line x1="10" y1="14" x2="21" y2="3"/>
+              </svg>
+              <span>Apri nel Browser</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUSES GRID SECTION -->
+  <section class="bonuses-section">
+    <div class="container">
+      <span class="section-tag">2. Materiali Complementari</span>
+      <h2 class="section-heading">I Tuoi 4 Bonus Esclusivi Inclusi</h2>
+
+      <div class="bonuses-grid">
+        <!-- BONUS 1 -->
+        <div class="bonus-card">
+          <div class="bonus-card-top">
+            <div class="bonus-thumb">
+              <img src="assets/cover_bonus1.png" alt="Bonus 1 - Unità di Misura" />
+            </div>
+            <div>
+              <span class="bonus-badge">🎁 BONUS #1</span>
+              <h3 class="bonus-title">Unità di Misura (1ª alla 5ª Classe)</h3>
+              <p class="bonus-desc">
+                Schede didattiche su lunghezza, massa, tempo, volume, capacità, area, perimetro e conversioni di unità.
+              </p>
+              <div class="bonus-meta">📄 PDF Pronto da Stampare • 1,0 MB</div>
+            </div>
+          </div>
+
+          <div class="bonus-actions">
+            <a href="files/Bonus_1_Unita_di_Misura.pdf" download="Bonus_1_Unita_di_Misura.pdf" class="btn-primary-dl">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>SCARICA BONUS #1</span>
+            </a>
+            <a href="files/Bonus_1_Unita_di_Misura.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-view">
+              <span>Apri PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BONUS 2 -->
+        <div class="bonus-card">
+          <div class="bonus-card-top">
+            <div class="bonus-thumb">
+              <img src="assets/cover_bonus2.png" alt="Bonus 2 - Tabellone delle Tabelline" />
+            </div>
+            <div>
+              <span class="bonus-badge">🎁 BONUS #2</span>
+              <h3 class="bonus-title">Tabellone delle Tabelline</h3>
+              <p class="bonus-desc">
+                Materiale visivo e colorato per aiutare il bambino a memorizzare le tabelline e la moltiplicazione con facilità.
+              </p>
+              <div class="bonus-meta">📄 PDF Pronto da Stampare • 229 KB</div>
+            </div>
+          </div>
+
+          <div class="bonus-actions">
+            <a href="files/Bonus_2_Tabellone_delle_Tabelline.pdf" download="Bonus_2_Tabellone_delle_Tabelline.pdf" class="btn-primary-dl">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>SCARICA BONUS #2</span>
+            </a>
+            <a href="files/Bonus_2_Tabellone_delle_Tabelline.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-view">
+              <span>Apri PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BONUS 3 -->
+        <div class="bonus-card">
+          <div class="bonus-card-top">
+            <div class="bonus-thumb">
+              <img src="assets/cover_bonus3.png" alt="Bonus 3 - Uno delle 4 Operazioni" />
+            </div>
+            <div>
+              <span class="bonus-badge">🎁 BONUS #3</span>
+              <h3 class="bonus-title">Uno delle 4 Operazioni</h3>
+              <p class="bonus-desc">
+                Gioco educativo stampabile per allenare il calcolo mentale e le 4 operazioni giocando in famiglia o in classe.
+              </p>
+              <div class="bonus-meta">📄 PDF Pronto da Stampare • 134 KB</div>
+            </div>
+          </div>
+
+          <div class="bonus-actions">
+            <a href="files/Bonus_3_Uno_delle_4_Operazioni.pdf" download="Bonus_3_Uno_delle_4_Operazioni.pdf" class="btn-primary-dl">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>SCARICA BONUS #3</span>
+            </a>
+            <a href="files/Bonus_3_Uno_delle_4_Operazioni.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-view">
+              <span>Apri PDF</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- BONUS 4 -->
+        <div class="bonus-card">
+          <div class="bonus-card-top">
+            <div class="bonus-thumb">
+              <img src="assets/cover_bonus4.png" alt="Bonus 4 - Frazioni" />
+            </div>
+            <div>
+              <span class="bonus-badge">🎁 BONUS #4</span>
+              <h3 class="bonus-title">Frazioni — Matematica Visiva</h3>
+              <p class="bonus-desc">
+                Attività illustrate per comprendere le frazioni in modo intuitivo, pratico e divertente.
+              </p>
+              <div class="bonus-meta">📄 PDF Pronto da Stampare • 396 KB</div>
+            </div>
+          </div>
+
+          <div class="bonus-actions">
+            <a href="files/Bonus_4_Frazioni.pdf" download="Bonus_4_Frazioni.pdf" class="btn-primary-dl">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="7 10 12 15 17 10"/>
+                <line x1="12" y1="15" x2="12" y2="3"/>
+              </svg>
+              <span>SCARICA BONUS #4</span>
+            </a>
+            <a href="files/Bonus_4_Frazioni.pdf" target="_blank" rel="noopener noreferrer" class="btn-secondary-view">
+              <span>Apri PDF</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIPS FOR PRINTING & USAGE -->
+  <section class="tips-section">
+    <div class="container">
+      <h2 class="tips-title">Come utilizzare al meglio il tuo materiale</h2>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-num">1</div>
+          <h4>Salva i file sul tuo dispositivo</h4>
+          <p>
+            Clicca su <strong>"Scarica"</strong> per salvare i PDF sul tuo telefono, tablet o computer. Il tuo accesso è vitalizio e puoi riscaricarli quando vuoi.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-num">2</div>
+          <h4>Stampa in formato A4</h4>
+          <p>
+            Tutte le schede sono già impaginate nel formato standard A4. Puoi stampare l'intero quaderno o solo le pagine della classe che ti interessa.
+          </p>
+        </div>
+
+        <div class="tip-card">
+          <div class="tip-num">3</div>
+          <h4>Procedi in modo graduale</h4>
+          <p>
+            Bastano 15–20 minuti al giorno! Inizia dalle attività del livello del bambino e usa i giochi e le tabelline per rendere lo studio ancora più leggero.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="Lezione Kids" />
+      </div>
+      <p class="footer-copy">
+        Tutti i diritti riservati | Lezione Kids 2026
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Sequential download of all 5 PDFs when clicking "SCARICA TUTTI I FILE (5 PDF)"
+    document.getElementById('btnDownloadAll').addEventListener('click', function () {
+      const files = [
+        { url: 'files/Matematica_4_Operazioni.pdf', name: 'Matematica_4_Operazioni.pdf' },
+        { url: 'files/Bonus_1_Unita_di_Misura.pdf', name: 'Bonus_1_Unita_di_Misura.pdf' },
+        { url: 'files/Bonus_2_Tabellone_delle_Tabelline.pdf', name: 'Bonus_2_Tabellone_delle_Tabelline.pdf' },
+        { url: 'files/Bonus_3_Uno_delle_4_Operazioni.pdf', name: 'Bonus_3_Uno_delle_4_Operazioni.pdf' },
+        { url: 'files/Bonus_4_Frazioni.pdf', name: 'Bonus_4_Frazioni.pdf' }
+      ];
+
+      const btn = this;
+      const originalHTML = btn.innerHTML;
+      btn.innerHTML = '<span>⏳ AVVIO DEI DOWNLOAD IN CORSO...</span>';
+
+      files.forEach((file, index) => {
+        setTimeout(() => {
+          const a = document.createElement('a');
+          a.href = file.url;
+          a.download = file.name;
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+
+          if (index === files.length - 1) {
+            setTimeout(() => {
+              btn.innerHTML = '<span>✅ TUTTI I 5 PDF SONO STATI SCARICATI!</span>';
+              setTimeout(() => {
+                btn.innerHTML = originalHTML;
+              }, 3500);
+            }, 600);
+          }
+        }, index * 450);
+      });
+    });
+  </script>
+</body>
+</html>
